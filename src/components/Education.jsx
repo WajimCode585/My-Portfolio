@@ -58,8 +58,8 @@ export default function Education() {
         <div>
           <p className="font-code text-muted text-xs tracking-[0.14em] uppercase mb-5">Certifications</p>
           <div className="space-y-4">
-            <CertItem icon="🎓" name="Frontend Development" issuer="Ducat Institute · Gurugram" year="2024" delay={0.1} />
-            <CertItem icon="🏅" name="PHP Certification"    issuer="Ducat Institute · Gurugram" year="2024" delay={0.2} />
+            <CertItem icon="🎓" name="Frontend Development" issuer="Ducat Institute · Gurugram" year="2023-2024" delay={0.1} />
+            <CertItem icon="🏅" name="PHP Certification"    issuer="Ducat Institute · Gurugram" year="2023-2024" delay={0.2} />
           </div>
         </div>
       </div>

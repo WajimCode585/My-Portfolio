@@ -11,11 +11,18 @@ const projects = [
     featured: true,
   },
   {
-    year: '2024',
+    year: '2025',
+    title: 'Lord Venus\nOfficial Website',
+    type: 'Web App · Frontend',
+    desc: 'Developed a modular React-based company registration page with dynamic section rendering, sticky navigation, and scroll-based active state using Intersection Observer for enhanced UX.',
+    stack: ['React.js', 'HTML', 'CSS', 'Tailwind CSS', 'Responsive'],
+  },
+  {
+    year: '2025',
     title: 'Car & Bike\nComparison Platform',
     type: 'Web App · Frontend',
     desc: 'A dynamic vehicle comparison platform with real-time filtering, search, and side-by-side spec views. Built for speed and ease-of-use for non-technical users browsing on mobile.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Tailwind'],
   },
   {
     year: '2024–25 · Open Source',

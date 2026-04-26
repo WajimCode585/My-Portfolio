@@ -19,7 +19,7 @@ const categories = [
       { name: 'Responsive Design',    pct: 0.92 },
       { name: 'Cross-Browser Compat.', pct: 0.82 },
       { name: 'Figma / Adobe',        pct: 0.65 },
-      { name: 'Agile / Sprints',      pct: 0.72 },
+      // { name: 'Agile / Sprints',      pct: 0.72 },
     ],
   },
   {

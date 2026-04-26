@@ -65,7 +65,7 @@ export default function Experience() {
             'Participated in sprint planning, standups, and retrospectives — consistently delivering features on schedule.',
             'Built and maintained the company\'s official website with improved load speed and mobile responsiveness.',
           ]}
-          tags={['React', 'Tailwind CSS', 'HTML/CSS', 'Git', 'Agile', 'Figma-to-Code']}
+          tags={['React', 'Tailwind CSS', 'HTML/CSS', 'Git', 'javascript', 'Figma-to-Code']}
           delay={0}
         />
 
