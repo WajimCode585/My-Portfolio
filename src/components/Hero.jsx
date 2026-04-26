@@ -59,9 +59,9 @@ export default function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <div className="animate-fadeUp6 absolute left-16 bottom-16 font-code text-muted text-xs tracking-widest uppercase hidden lg:flex flex-col items-center gap-3"
+      <div className="animate-fadeUp6 absolute left-8 bottom-42 font-code text-muted text-xs tracking-widest uppercase hidden lg:flex flex-col items-center gap-3"
            style={{ writingMode: 'vertical-rl' }}>
-        {/* Scroll Down  */}
+        <div>Scroll Down </div>
       </div>
     </header>
   )

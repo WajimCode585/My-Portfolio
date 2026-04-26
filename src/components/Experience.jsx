@@ -59,7 +59,7 @@ export default function Experience() {
           badge="Current"
           company="Nurture Webtech · Remote / Gurgaon, India"
           bullets={[
-            'Developed 5+ responsive websites and apps using React, Tailwind CSS, HTML/CSS ensuring full cross-browser compatibility.',
+            'Developed 3+ responsive websites using React, Tailwind CSS, HTML/CSS ensuring full cross-browser compatibility.',
             'Collaborated with designers to translate Figma mockups into pixel-perfect, user-friendly interfaces.',
             'Managed codebase using Git with structured branching, PRs, and commit conventions in a remote agile team.',
             'Participated in sprint planning, standups, and retrospectives — consistently delivering features on schedule.',
