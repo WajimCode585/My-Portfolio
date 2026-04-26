@@ -48,7 +48,7 @@ export default function Hero() {
       <div className="animate-fadeUp5 absolute right-16 bottom-16 flex-col gap-6 hidden lg:flex">
         {[
           { num: '1+', label: 'Yr Experience' },
-          { num: '5+', label: 'Projects Shipped' },
+          { num: '3+', label: 'Projects Shipped' },
           { num: '2',  label: 'Certifications' },
         ].map(s => (
           <div key={s.label} className="text-right">
@@ -61,8 +61,7 @@ export default function Hero() {
       {/* Scroll hint */}
       <div className="animate-fadeUp6 absolute left-16 bottom-16 font-code text-muted text-xs tracking-widest uppercase hidden lg:flex flex-col items-center gap-3"
            style={{ writingMode: 'vertical-rl' }}>
-        <div className="scroll-hint-line" />
-        Scroll Down
+        {/* Scroll Down  */}
       </div>
     </header>
   )
