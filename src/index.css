@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #050508;
+    color: #e8e8f0;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  @media (max-width: 768px) {
+    body { cursor: auto; }
+  }
+}
+
+@layer components {
+  /* ── Gradient text ── */
+  .text-gradient {
+    background: linear-gradient(135deg, #00f5c4 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-contact {
+    background: linear-gradient(135deg, #e8e8f0 30%, #00f5c4 70%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Glass card ── */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+  }
+
+  .glass-top {
+    position: relative;
+  }
+  .glass-top::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00f5c4, #7c3aed);
+  }
+
+  /* ── Section label ── */
+  .sec-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #00f5c4;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* ── Neon divider ── */
+  .neon-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #00f5c4, transparent);
+    margin-bottom: 3rem;
+  }
+
+  /* ── Primary button ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    background: #00f5c4;
+    color: #050508;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: #7c3aed;
+    transform: translateX(-101%);
+    transition: transform 0.4s cubic-bezier(0.77,0,0.18,1);
+  }
+  .btn-primary:hover::before { transform: translateX(0); }
+  .btn-primary:hover { color: #fff; }
+  .btn-primary > span { position: relative; z-index: 1; }
+
+  /* ── Outline button ── */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255,255,255,0.14);
+    color: #e8e8f0;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover {
+    border-color: #00f5c4;
+    color: #00f5c4;
+  }
+
+  /* ── Nav link underline ── */
+  .nav-link {
+    position: relative;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6b6b8a;
+    text-decoration: none;
+    transition: color 0.25s;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: #00f5c4;
+    transition: width 0.3s;
+  }
+  .nav-link:hover { color: #00f5c4; }
+  .nav-link:hover::after { width: 100%; }
+  .nav-link.active { color: #00f5c4; }
+  .nav-link.active::after { width: 100%; }
+
+  /* ── Skill bar ── */
+  .skill-bar-track {
+    width: 100px;
+    height: 3px;
+    background: rgba(255,255,255,0.06);
+    overflow: hidden;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00f5c4, #7c3aed);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(0.4,0,0.2,1);
+  }
+  .skill-bar-fill.animate {
+    transform: scaleX(1);
+  }
+
+  /* ── Scroll hint ── */
+  .scroll-hint-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, #00f5c4, transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  /* ── Timeline ── */
+  .timeline-line {
+    position: absolute;
+    left: 10px; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, #00f5c4, transparent);
+  }
+
+  /* ── Project card hover ── */
+  .proj-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+  }
+  .proj-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00f5c4, #7c3aed);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .proj-card:hover { border-color: #7c3aed; transform: translateY(-4px); }
+  .proj-card:hover::before { transform: scaleX(1); }
+
+  /* ── Contact pill ── */
+  .contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.9rem 1.8rem;
+    border: 1px solid rgba(255,255,255,0.14);
+    color: #e8e8f0;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+  .contact-pill:hover {
+    border-color: #00f5c4;
+    color: #00f5c4;
+    box-shadow: 0 0 20px rgba(0,245,196,0.1);
+  }
+
+  /* ── Fade-up on scroll ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .slide-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
